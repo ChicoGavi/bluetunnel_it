@@ -1,0 +1,359 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'BlueTunnel IT',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Cotiza Aqui',
+        href: 'https://linktr.ee/bluetunnel',
+        target: '_blank',
+        
+      },
+      { text: 'Nosotros', href: '#features' },
+    ]}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+  >
+    <Fragment slot="title">
+      Impulsa tu futuro en tecnología con <span class="hidden xl:inline"></span>
+      <span class="text-accent dark:text-white highlight"> BlueTunnel IT</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">En BlueTunnel IT</span> Impulsa tu futuro tecnológico. Te brindamos, productos tecnológicos asesoría, auditoría, capacitación y automatización para que crezcas sin límites. ¡Hazlo hoy! La oportunidad de avanzar no espera. 
+        </span
+      >
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+  <Note />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Servicios"
+    title="Lo que realizamos"
+    subtitle="Esto es lo que encontraras en nuestra empresa"
+    items={[
+      {
+        title: 'Desarrollamos webs y ecommerce a medida, optimizados y orientados a resultados.',
+        description:
+          'Creamos páginas web modernas, ecommerce, optimizadas y adaptadas a las necesidades de tu negocio, asegurando una experiencia de usuario excepcional y posicionamiento en buscadores.',
+        icon: 'tabler:brand-tailwind',
+      },
+      {
+        title: 'Auditoría, capacitación y asesoría tecnológica para impulsar tu empresa',
+        description:
+          'Ofrecemos auditorías tecnológicas, capacitaciones especializadas y asesoría estratégica, adaptadas a las necesidades de tu empresa, impulsando la eficiencia operativa, la seguridad digital y la toma de decisiones inteligentes.',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Impulsa el crecimiento de tu negocio automatizando procesos con eficiencia.',
+        description:
+          'Implementamos soluciones de automatización de procesos, adaptadas a las dinámicas de tu empresa, optimizando tiempos, reduciendo errores y aumentando la productividad operativa.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Venta de productos tecnológicos que impulsan tu negocio',
+        description:
+          'Ofrecemos computadores, accesorios y componentes tecnológicos de alta calidad, adaptados a las necesidades de tu empresa, garantizando rendimiento, compatibilidad y soluciones eficientes para cada entorno',
+        icon: 'tabler:rocket',
+      },
+    
+      
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    id = 'Beneficios'
+    tagline="Beneficios"
+    title="¿Por Qué Elegir Blue Tunnel?"
+    items={[
+      {
+        title: 'Soluciones Personalizadas',
+        description:
+          'Adaptadas a las necesidades únicas de tu negocio.',
+      },
+      {
+        title: 'Acompañamiento Continuo',
+        description:
+          'Mantenimiento y soporte técnico mes a mes.',
+      },
+      {
+        title: 'Experiencia en Pymes',
+        description:
+          'Sabemos cómo ayudar a las pequeñas y medianas empresas a crecer.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">La clave para el éxito digital de tu negocio</h3>
+      En Blue Tunnel no solo desarrollamos software y páginas web; nos convertimos en aliados estratégicos de tu crecimiento digital.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Optimización SEO',
+        description: `Para que tu web sea visible y relevante en buscadores.`,
+      },
+      {
+        title: 'Tecnología de Última Generación',
+        description:
+          'Siempre usamos herramientas actualizadas para ofrecerte lo mejor.',
+      },
+      {
+        title: 'Entrega Puntual y Garantía de Calidad',
+        description:
+          "Cumplimos los plazos establecidos sin comprometer la calidad de nuestros proyectos.",
+      },
+      {
+        title: 'Asesoría Estratégica Personalizada',
+        description:
+          'Te guiamos en la mejor manera de integrar las soluciones digitales para potenciar tu negocio.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
+      alt: 'Blueprint Image',
+    }}
+  >
+    <Fragment slot="content">Un Software pensado en su empresa.</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="¿Cómo es el Proceso para Satisfacer tus Necesidades?"
+    items={[
+      {
+        title: 'Paso 1: <span class="font-medium">Reunión Inicial y Análisis de Necesidades.</span>',
+        description:
+          "Nos reunimos contigo para entender tu necesidad, identificar tus puntos clave y definir los objetivos que quieres alcanzar.",
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Paso 2: <span class="font-medium"> Diseño y Propuesta Personalizada.</span>',
+        description:
+          "Creamos una propuesta detallada con el diseño y las funcionalidades de acuerdo a tu necesidad.",
+        icon: 'tabler:letter-case',
+      },
+      {
+        title: 'Paso 3: <span class="font-medium">Desarrollo y Pruebas.</span>',
+        description:
+          'Nuestro equipo se pone manos a la obra. Durante esta fase, realizamos pruebas constantes para garantizar calidad y funcionalidad.',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Paso 4: <span class="font-medium">Presentación y Ajustes Finales.</span>',
+        description:
+          'Te mostramos la versión final y realizamos ajustes según tus comentarios y objetivos.',
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Paso 5: <span class="font-medium">Soporte Continuo.</span>',
+        description:
+          'Brindamos soporte continuo especializado, adaptado a las necesidades de tu negocio, garantizando operatividad constante y soluciones rápidas para maximizar tu productividad.',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Ready!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    id = 'Nosotros'
+    title="Nuestros Equipo"
+    subtitle="En BlueTunnel IT, tenemos un equipo altamente preparado para construir tus sueños digitales."
+    tagline="Equipo"
+    items={[
+      {
+        title: 'Brian Acevedo',
+        description: "Co-Founder | Administrador de Sistemas.",
+        icon: 'flat-color-icons:business-contact',
+      },
+      {
+        title: 'Santiago Gaviria',
+        description:
+          "Co-Founder | Experto en Ciberseguridad.",
+        icon: 'flat-color-icons:business-contact',
+      },
+      {
+        title: 'Cerfificaciones Internacionales',
+        description:
+          'Cibersecurity | SFPC | Desarrollo ',
+        icon: 'flat-color-icons:business-contact',
+      },
+      /*{
+        title: 'Content',
+        description:
+          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: 'Call-to-Action',
+        description:
+          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
+        icon: 'flat-color-icons:advertising',
+      },
+      {
+        title: 'Pricing',
+        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
+        icon: 'flat-color-icons:currency-exchange',
+      },
+      {
+        title: 'Testimonial',
+        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+      {
+        title: 'Contact',
+        description:
+          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
+        icon: 'flat-color-icons:business-contact',
+      },
+      {
+        title: 'Footers',
+        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
+        icon: 'flat-color-icons:database',
+      },*/
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="Nuestros Proyectos Destacados"
+    information={`En Blue Tunnel, cada proyecto es una oportunidad para innovar y transformar ideas en soluciones reales. Aquí te mostramos algunos de los desarrollos que hemos realizado para diferentes empresas y sectores
+                `}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Preguntas Frecuentes"
+    subtitle="Aquí resolvemos las dudas más comunes que suelen tener nuestros clientes. Si tienes alguna otra pregunta, no dudes en contactarnos directamente"
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: '¿Qué los diferencia de otras empresas de tecnología?',
+        description:
+          "En BlueTunnel IT no solo vendemos tecnología: la entendemos contigo, la adaptamos a tu realidad y te acompañamos en cada paso para que realmente impulse tu futuro.",
+      },
+      {
+        title: '¿Cómo funciona la auditoría tecnológica que ofrecen?',
+        description:
+          'Evaluamos tu infraestructura actual, detectamos puntos críticos y proponemos mejoras para aumentar la eficiencia, seguridad y escalabilidad de tu entorno digital.',
+      },
+      {
+        title: '¿Pueden automatizar procesos internos en mi empresa?',
+        description:
+          "Sí. Automatizamos tareas rutinarias mediante soluciones digitales que ahorran tiempo, reducen errores y mejoran la eficiencia de tu operación diaria.",
+      },
+      {
+        title: "¿Qué productos tecnológicos puedo adquirir con ustedes?",
+        description:
+          "Ofrecemos accesorios, componentes y soluciones integrales de hardware y software adaptados a tu empresa, con asesoría incluida para una compra inteligente.",
+      },
+      {
+        title: '¿Qué pasa si tengo problemas con mi página web o software después de la entrega?',
+        description:
+          "No te preocupes, siempre estamos aquí para ayudarte. Ofrecemos soporte técnico continuo para resolver cualquier inconveniente que puedas tener, ya sea un error, actualización o mantenimiento. Solo debes contactarnos y lo solucionaremos lo más rápido posible.",
+      },
+      {
+        title: '¿Qué tipo de asesoría tecnológica ofrecen?',
+        description:
+          "Brindamos asesoría personalizada según las necesidades de tu negocio, desde elección de equipos hasta estrategias digitales para optimizar tu rendimiento tecnológico.",
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Proyectos Creados', amount: '+5' },
+      { title: 'Clientes Satisfechos', amount: '95%' },
+      { title: 'Años de Experiencia Combinada', amount: '+4' },
+      { title: 'Soluciones Personalizadas', amount: '100%' },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Cotiza tu proyecto',
+        href: 'https://linktr.ee/bluetunnel',
+        target: '_blank',
+        
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      ¿Estás Listo para&nbsp;&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap"> Transformar Tu Negocio?</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Si estás listo para dar el siguiente paso y llevar tu presencia digital al siguiente nivel, estamos aquí para ayudarte. 
+    </Fragment>
+  </CallToAction>
+</Layout>
